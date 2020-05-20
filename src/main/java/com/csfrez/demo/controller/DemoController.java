@@ -21,4 +21,17 @@ public class DemoController {
         }
         return demoService.hello(name);
     }
+
+    @GetMapping("/test")
+    public String test() {
+        double random = Math.round(Math.random()*1000);
+        long time = Double.valueOf(random).longValue();
+        System.out.println(Thread.currentThread().getName()+"==>"+random);
+        try {
+            Thread.sleep(time);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return "test";
+    }
 }
