@@ -2,6 +2,7 @@ package com.csfrez.demo.controller;
 
 import com.csfrez.demo.service.DemoService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -10,6 +11,9 @@ public class DemoController {
 
     @Autowired
     DemoService demoService;
+
+    @Value("${my.uuid}")
+    private String uuid;
 
     @GetMapping("/hello")
     public String hello(String name){
@@ -33,5 +37,10 @@ public class DemoController {
             e.printStackTrace();
         }
         return "test";
+    }
+
+    @GetMapping("/uuid")
+    public String uuid(){
+        return this.uuid;
     }
 }
