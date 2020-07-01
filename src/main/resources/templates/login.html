@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="#{login_home}" />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+</head>
+<body>
+<body>
+<div layout:fragment="content" th:remove="tag">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <h1 th:text="#{login_login_page}"></h1>
+            <form th:action="@{/login}" method="post">
+                <div class="form-group">
+                    <label for="username" th:text="#{login_username}"></label>:
+                    <input type="text" id="username" name="username" class="form-control" autofocus="autofocus" th:placeholder="#{login_username}" />
+                </div>
+                <div class="form-group">
+                    <label for="password" th:text="#{login_password}"></label>:
+                    <input type="password" id="password" name="password" class="form-control" th:placeholder="#{login_password}" />
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-6 col-sm-offset-3">
+                            <input type="submit" name="login-submit" id="login-submit" class="form-control btn btn-info" th:value="#{login_login}" />
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="form-group">
+                <label th:text="#{login_languge_selector}"></label>
+                <select class="form-control" id ="locales">
+                    <option  value="" th:text="#{login_please_select_language_to_display}"></option>
+                    <option th:selected="${displayLang=='en_US'}" value="en_US">English</option>
+                    <option th:selected="${displayLang=='zh_CN'}" value="zh_CN">简体中文</option>
+                    <option th:selected="${displayLang=='ja_JP'}" value="ja_JP">日本語</option>
+                    <option th:selected="${displayLang=='zh_TW'}" value="zh_TW">繁體中文</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</body>
+</html>
