@@ -9,17 +9,17 @@ import javax.annotation.PostConstruct;
 public class CatInitializingBean implements InitializingBean {
 
     public CatInitializingBean() {
-        System.out.println("Cat constructor run...");
+        System.out.println("CatInitializingBean constructor run...");
     }
 
     @PostConstruct
     public void afterInit() {
-        System.out.println("Cat PostConstruct run...");
+        System.out.println("CatInitializingBean PostConstruct run...");
     }
 
 
     @Override
     public void afterPropertiesSet() {
-        System.out.println("Cat afterPropertiesSet run...");
+        System.out.println("CatInitializingBean afterPropertiesSet run...");
     }
 }

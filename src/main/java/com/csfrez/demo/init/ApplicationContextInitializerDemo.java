@@ -10,7 +10,7 @@ public class ApplicationContextInitializerDemo implements ApplicationContextInit
 
     @Override
     public void initialize(ConfigurableApplicationContext applicationContext) {
-        System.out.println("ApplicationContextInitializerDemo#initialize run...");
+        System.out.println("ApplicationContextInitializerDemo.initialize");
     }
 
 }
