@@ -10,7 +10,7 @@ public class CatBeanPostProcessor implements BeanPostProcessor {
     @Override
     public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
         if (bean instanceof CatInitializingBean) {
-            System.out.println("Cat postProcessBeforeInitialization run...");
+            System.out.println("CatBeanPostProcessor postProcessBeforeInitialization run...");
         }
         return bean;
     }
@@ -18,7 +18,7 @@ public class CatBeanPostProcessor implements BeanPostProcessor {
     @Override
     public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
         if (bean instanceof CatInitializingBean) {
-            System.out.println("Cat postProcessAfterInitialization run...");
+            System.out.println("CatBeanPostProcessor postProcessAfterInitialization run...");
         }
         return bean;
     }

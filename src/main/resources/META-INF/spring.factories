@@ -1,2 +1,5 @@
+org.springframework.context.ApplicationContextInitializer=\
+com.csfrez.demo.init.ApplicationContextInitializerDemo
+
 org.springframework.boot.SpringApplicationRunListener=\
 com.csfrez.demo.listen.DemoSpringApplicationRunListener

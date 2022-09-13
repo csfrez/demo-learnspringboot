@@ -12,7 +12,7 @@ public class DemoSpringApplicationRunListener implements SpringApplicationRunLis
     private final String[] args;
 
     public DemoSpringApplicationRunListener(SpringApplication application, String[] args) {
-        System.out.println("constructor() ");
+        System.out.println("DemoSpringApplicationRunListener.constructor() ");
         this.application = application;
         this.args = args;
     }
@@ -20,36 +20,36 @@ public class DemoSpringApplicationRunListener implements SpringApplicationRunLis
 
     @Override
     public void starting() {
-        System.out.println("starting() ");
+        System.out.println("DemoSpringApplicationRunListener.starting() ");
     }
 
     @Override
     public void environmentPrepared(ConfigurableEnvironment environment) {
-        System.out.println("environmentPrepared() ");
+        System.out.println("DemoSpringApplicationRunListener.environmentPrepared() ");
     }
 
     @Override
     public void contextPrepared(ConfigurableApplicationContext context) {
-        System.out.println("contextPrepared() ");
+        System.out.println("DemoSpringApplicationRunListener.contextPrepared() ");
     }
 
     @Override
     public void contextLoaded(ConfigurableApplicationContext context) {
-        System.out.println("contextLoaded() ");
+        System.out.println("DemoSpringApplicationRunListener.contextLoaded() ");
     }
 
     @Override
     public void started(ConfigurableApplicationContext context) {
-        System.out.println("started() ");
+        System.out.println("DemoSpringApplicationRunListener.started() ");
     }
 
     @Override
     public void running(ConfigurableApplicationContext context) {
-        System.out.println("running() ");
+        System.out.println("DemoSpringApplicationRunListener.running() ");
     }
 
     @Override
     public void failed(ConfigurableApplicationContext context, Throwable exception) {
-        System.out.println("failed() ");
+        System.out.println("DemoSpringApplicationRunListener.failed() ");
     }
 }
